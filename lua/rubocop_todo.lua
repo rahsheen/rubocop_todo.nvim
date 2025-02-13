@@ -45,7 +45,6 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	group = vim.api.nvim_create_augroup("RubocopTodo", {}),
 	pattern = "*.rb",
 	callback = function(event)
-		vim.api.nvim_command("echo 'BufEnter triggered'")
 		M.setup(event.buf)
 	end,
 })
